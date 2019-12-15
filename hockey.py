@@ -1,5 +1,5 @@
 import sys
-from yattag import Doc
+from yattag import Doc, indent
 
 # volokit link format template
 # http://www.volokit.com/all-games/nhl/Detroit.php
@@ -171,7 +171,6 @@ print(teams)
 # building document
 build_document(teams)
 
-print(doc.getvalue())
 file = open(output_filename, "w")
-file.write(doc.getvalue())
+file.write(indent(doc.getvalue()))
 file.close()
