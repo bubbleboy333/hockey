@@ -61,6 +61,8 @@ team_names = {
 num_pre_team_args = 1
 link_template = "http://www.volokit.com/all-games/nhl/{}.php"
 
+output_filename = "hockey.html"
+doc, tag, text = Doc().tagtext()
 
 def get_scrubbed_team_name(rough_name):
     return team_names[rough_name.lower()]
@@ -74,6 +76,46 @@ def build_team_list(num_teams):
 def format_link(team):
     return link_template.format(team)
 
+def build_one_team(teams):
+    for team in teams:
+        with tag('h4', style="margin:0px;height:4%"):
+            text(team)
+        with tag('iframe', src=format_link(team), style="height:95%;width:100%"):
+            text("")
+
+def build_two_team(teams):
+    with tag('div', style="display:table;height:100%;width:100%"):
+        with tag('div', style="display:table-row"):
+            for team in teams:
+                with tag('div', style="display:table-cell"):
+                    with tag('h4', style="margin:0px;height:4%"):
+                        text(team)
+                    with tag('iframe', src=format_link(team), style="height:90%;width:100%"):
+                        text("")
+
+def build_four_team(teams):
+    with tag('div', style="display:table;height:100%;width:100%"):
+        team_index = 0
+        for row in range(0,2):
+            with tag('div', style="display:table-row"):
+                for col in range(0,2):
+                    with tag('div', style="display:table-cell"):
+                        with tag('h4', style="margin:0px;height:4%"):
+                            text(teams[team_index])
+                        with tag('iframe', src=format_link(teams[team_index]), style="height:90%;width:100%"):
+                            text("")
+                    team_index += 1
+
+def build_document(teams):
+    num_teams = len(teams)
+    if num_teams == 1:
+        build_one_team(teams)
+    elif num_teams == 2:
+        build_two_team(teams)
+    elif num_teams == 4:
+        build_four_team(teams)
+
+
 ### Main
 # sys.argv[0] hockey.py
 team_count = len(sys.argv) - num_pre_team_args # subtract out program name
@@ -83,17 +125,8 @@ if team_count > 4:
 teams = build_team_list(team_count)
 print(teams)
 
-output_filename = "hockey.html"
-doc, tag, text = Doc().tagtext()
-
 # building document
-with tag('h1'):
-    text('Hockey!')
-for team in teams:
-    with tag('h3'):
-        text(team)
-    with tag('iframe', src=format_link(team)):
-        text("")
+build_document(teams)
 
 print(doc.getvalue())
 file = open(output_filename, "w")
