@@ -44,13 +44,18 @@ minnesota_link_value = "Minnesota"
 # Winnipeg Jets -> Winnipeg, Manitoba -> Winnipeg
 winnipeg_link_value = "Winnipeg"
 ## Pacific Division
-# Anaheim Ducks -> Anaheim, California ->
-# Arizona Coyotes -> Glendale, Arizona ->
-# Calgary Flames -> Calgary, Alberta ->
-# Edmonton Oilers -> Edmonton, Alberta ->
+# Anaheim Ducks -> Anaheim, California -> Anaheim
+anaheim_link_value = "Anaheim"
+# Arizona Coyotes -> Glendale, Arizona -> Arizona
+arizona_link_value = "Arizona"
+# Calgary Flames -> Calgary, Alberta -> Calgary
+calgary_link_value = "Calgary"
+# Edmonton Oilers -> Edmonton, Alberta -> Edmonton
+edmonton_link_value = "Edmonton"
 # Los Angeles Kings -> Los Angeles, California -> Los-Angeles
 los_angeles_link_value = "Los-Angeles"
 # San Jose Sharks -> San Jose, California ->
+san_jose_link_value = "San-Jose"
 # Vancouver Canucks -> Vancouver, British Columbia -> Vancouver
 vancouver_link_value = "Vancouver"
 # Vegas Golden Knights -> Paradise, Nevada -> Vegas
@@ -84,12 +89,12 @@ team_names = {
     "stlouis": "", "louis": "", "blues": "",
     "winnipeg": winnipeg_link_value, "jets": winnipeg_link_value,
     # Pacific Division
-    "anaheim": "", "ducks": "",
-    "arizona": "", "coyotes": "",
-    "calgary": "", "flames": "",
-    "edmonton": "", "oilers": "",
+    "anaheim": anaheim_link_value, "ducks": anaheim_link_value,
+    "arizona": arizona_link_value, "coyotes": arizona_link_value,
+    "calgary": calgary_link_value, "flames": calgary_link_value,
+    "edmonton": edmonton_link_value, "oilers": edmonton_link_value,
     "losangeles": los_angeles_link_value, "angeles": los_angeles_link_value, "kings": los_angeles_link_value,
-    "sanjose": "", "jose": "", "sharks": "",
+    "sanjose": san_jose_link_value, "jose": san_jose_link_value, "sharks": san_jose_link_value,
     "vancouver": vancouver_link_value, "canucks": vancouver_link_value,
     "vegas": vegas_link_value, "lasvegas": vegas_link_value, "goldenknights": vegas_link_value, "knights": vegas_link_value,
     "seattle": "", "": "",
