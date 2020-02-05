@@ -20,27 +20,39 @@ montreal_link_value = "Montreal"
 # Ottawa Senators -> Ottawa, Ontario -> Ottawa
 ottawa_link_value = "Ottawa"
 # Tampa Bay Lightning -> Tampa, Florida ->
+tampa_link_value = "Tampa-Bay"
 # Toronto Maple Leafs -> Toronto, Ontario -> Toronto
 toronto_link_value = "Toronto"
 ##  Metropolitan Division
 # Carolina Hurricanes -> Raleigh, North Carolina ->
+carolina_link_value = "Carolina"
 # Columbus Blue Jackets -> Columbus, Ohio ->
+columbus_link_value = "Columbus"
 # New Jersey Devils -> Newark, New Jersey ->
+jersey_link_value = "New-Jersey"
 # New York Islanders -> New York City, New York ->
+new_york_link_value = "NY-Islanders"
 # Philadelphia Flyers -> Philadelphia, Pennsylvania -> Philadelphia
 philadelphia_link_value = "Philadelphia"
 # Pittsburgh Penguins -> Pittsburgh, Pennsylvania ->
+pittsburgh_link_value = ""
 # Washington Capitals -> Washington, D.C. ->
+washington_link_value = "Washington"
 ### Western Conference
 ## Central Division
 # Chicago Blackhawks -> Chicago, Illinois -> Chicago
 chicago_link_value = "Chicago"
 # Colorado Avalanche -> Denver, Colorado ->
+colorado_link_value = "Colorado"
+
 # Dallas Stars -> Dallas, Texas ->
+dallas_link_value = "Dallas"
 # Minnesota Wild -> Saint Paul, Minnesota -> Minnesota
 minnesota_link_value = "Minnesota"
 # Nashville Predators -> Nashville, Tennessee ->
+nashville_link_value = "Nashville"
 # St. Louis Blues -> St. Louis, Missouri ->
+st_louis_link_value = "St-Louis"
 # Winnipeg Jets -> Winnipeg, Manitoba -> Winnipeg
 winnipeg_link_value = "Winnipeg"
 ## Pacific Division
@@ -61,6 +73,7 @@ vancouver_link_value = "Vancouver"
 # Vegas Golden Knights -> Paradise, Nevada -> Vegas
 vegas_link_value = "Vegas"
 # Seattle -> Seattle, Washington ->
+seattle_link_value = ""
 
 team_names = {
     # Atlantic Division
@@ -70,23 +83,23 @@ team_names = {
     "florida": florida_link_value, "panthers": florida_link_value,
     "montreal": montreal_link_value, "canadiens": montreal_link_value,
     "ottawa": ottawa_link_value, "senators": ottawa_link_value,
-    "tampabay": "", "tampa": "", "lightning": "",
+    "tampabay": tampa_link_value, "tampa": tampa_link_value, "lightning": tampa_link_value,
     "toronto": toronto_link_value, "mapleleafs": toronto_link_value, "leafs": toronto_link_value,
     # Metropolitan Division
-    "carolina": "", "hurricanes": "",
-    "columbus": "", "bluejackets": "", "jackets": "",
-    "newjersey": "", "jersey": "", "devils": "",
-    "newyork": "", "islanders": "",
+    "carolina": carolina_link_value, "hurricanes": carolina_link_value,
+    "columbus": columbus_link_value, "bluejackets": columbus_link_value, "jackets": columbus_link_value,
+    "newjersey": jersey_link_value, "jersey": jersey_link_value, "devils": jersey_link_value,
+    "newyork": new_york_link_value, "islanders": new_york_link_value,
     "philadelphia": philadelphia_link_value, "philly": philadelphia_link_value, "flyers": philadelphia_link_value,
-    "pittsburgh": "", "penguins": "",
-    "washington": "", "capitals": "",
+    "pittsburgh": pittsburgh_link_value, "penguins": pittsburgh_link_value,
+    "washington": washington_link_value, "capitals": washington_link_value,
     # Central Division
     "chicago": chicago_link_value, "blackhawks": chicago_link_value,
-    "colorado": "", "avalanche": "",
-    "dallas": "", "stars": "",
+    "colorado": colorado_link_value, "avalanche": colorado_link_value,
+    "dallas": dallas_link_value, "stars": dallas_link_value,
     "minnesota": minnesota_link_value, "wild": minnesota_link_value,
-    "nashville": "", "predators": "",
-    "stlouis": "", "louis": "", "blues": "",
+    "nashville": nashville_link_value, "predators": nashville_link_value,
+    "stlouis": st_louis_link_value, "louis": st_louis_link_value, "blues": st_louis_link_value,
     "winnipeg": winnipeg_link_value, "jets": winnipeg_link_value,
     # Pacific Division
     "anaheim": anaheim_link_value, "ducks": anaheim_link_value,
@@ -97,7 +110,7 @@ team_names = {
     "sanjose": san_jose_link_value, "jose": san_jose_link_value, "sharks": san_jose_link_value,
     "vancouver": vancouver_link_value, "canucks": vancouver_link_value,
     "vegas": vegas_link_value, "lasvegas": vegas_link_value, "goldenknights": vegas_link_value, "knights": vegas_link_value,
-    "seattle": "", "": "",
+    "seattle": seattle_link_value, "": seattle_link_value,
 }
 # number of arguments on CLI before team names
 num_pre_team_args = 1
